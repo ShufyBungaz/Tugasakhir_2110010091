@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 182
-  Top = 126
+  Left = 235
+  Top = 156
   Width = 928
   Height = 595
   Caption = 'Form2'
@@ -16,9 +16,15 @@ object Form2: TForm2
   object lbl7: TLabel
     Left = 360
     Top = 16
-    Width = 63
-    Height = 13
+    Width = 97
+    Height = 19
     Caption = 'DATA SISWA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object pnl1: TPanel
     Left = 72
@@ -266,11 +272,40 @@ object Form2: TForm2
     Top = 400
     Width = 689
     Height = 120
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\Tugas akhir\libmysql.dll'
+    Left = 824
+    Top = 88
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select*from data_siswa')
+    Params = <>
+    Left = 832
+    Top = 184
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 848
+    Top = 272
   end
 end
