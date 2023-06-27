@@ -176,6 +176,7 @@ object Form4: TForm4
     Top = 344
     Width = 761
     Height = 120
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -184,6 +185,10 @@ object Form4: TForm4
     TitleFont.Style = []
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_walikelas')
     Params = <>
     Left = 848
     Top = 168
@@ -192,11 +197,18 @@ object Form4: TForm4
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\Tugas akhir\libmysql.dll'
     Left = 848
     Top = 96
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 848
     Top = 240
   end
