@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 235
-  Top = 156
+  Left = 349
+  Top = 178
   Width = 928
   Height = 595
   Caption = 'Form2'
@@ -11,6 +11,7 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl7: TLabel
@@ -35,12 +36,12 @@ object Form2: TForm2
     object lbl1: TLabel
       Left = 8
       Top = 24
-      Width = 37
-      Height = 19
+      Width = 24
+      Height = 13
       Caption = 'NISN'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -16
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -213,7 +214,7 @@ object Form2: TForm2
       Top = 264
       Width = 97
       Height = 33
-      Caption = 'EDIT'
+      Caption = 'BARU'
       TabOrder = 11
     end
     object btn2: TButton
@@ -221,7 +222,7 @@ object Form2: TForm2
       Top = 264
       Width = 81
       Height = 33
-      Caption = 'HAPUS'
+      Caption = 'SIMPAN'
       TabOrder = 12
     end
     object btn3: TButton
@@ -229,7 +230,7 @@ object Form2: TForm2
       Top = 264
       Width = 81
       Height = 33
-      Caption = 'BATAL'
+      Caption = 'EDIT'
       TabOrder = 13
     end
     object btn4: TButton
@@ -237,15 +238,16 @@ object Form2: TForm2
       Top = 264
       Width = 81
       Height = 33
-      Caption = 'BARU'
+      Caption = 'HAPUS'
       TabOrder = 14
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 608
       Top = 264
       Width = 81
       Height = 33
-      Caption = 'SIMPAN'
+      Caption = 'BATAL'
       TabOrder = 15
     end
     object edt11: TEdit
