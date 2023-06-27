@@ -142,6 +142,7 @@ object Form3: TForm3
       Height = 33
       Caption = 'EDIT'
       TabOrder = 8
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 488
@@ -172,6 +173,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object btn6: TButton
     Left = 824
