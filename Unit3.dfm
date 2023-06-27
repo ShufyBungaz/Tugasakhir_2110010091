@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl8: TLabel
@@ -31,7 +32,6 @@ object Form3: TForm3
     Top = 48
     Width = 745
     Height = 289
-    Caption = 'sss'
     TabOrder = 0
     object lbl1: TLabel
       Left = 32
@@ -138,6 +138,7 @@ object Form3: TForm3
       Height = 33
       Caption = 'BARU'
       TabOrder = 7
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 192
@@ -184,6 +185,15 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object btn6: TButton
+    Left = 824
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'NEXT'
+    TabOrder = 2
+    OnClick = btn6Click
   end
   object zqry1: TZQuery
     Connection = con1
