@@ -16,13 +16,11 @@ type
     edt4: TEdit;
     edt5: TEdit;
     edt6: TEdit;
-    edt7: TEdit;
     btn1: TButton;
     btn2: TButton;
     btn3: TButton;
     btn4: TButton;
     btn5: TButton;
-    lbl1: TLabel;
     lbl2: TLabel;
     lbl3: TLabel;
     lbl4: TLabel;
@@ -40,6 +38,7 @@ type
     procedure btn6Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -74,7 +73,6 @@ begin
   edt4.Enabled := True;
   edt5.Enabled := True;
   edt6.Enabled := True;
-  edt7.Enabled := True;
 end;
 
 procedure TForm3.bersih;
@@ -85,7 +83,6 @@ begin
  edt4.Clear;
  edt5.Clear;
  edt6.Clear;
- edt7.Clear;
 end;
 
 procedure TForm3.posisiawal;
@@ -102,7 +99,6 @@ begin
   edt4.Enabled := False;
   edt5.Enabled := False;
   edt6.Enabled := False;
-  edt7.Enabled := False;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);
@@ -110,4 +106,43 @@ begin
 posisiawal;
 end;
 
+procedure TForm3.btn2Click(Sender: TObject);
+begin
+  if edt1.Text =''then
+begin
+  ShowMessage('NIK TIDAK BOLEH KOSONG');
+  end else
+if edt2.Text =''then
+begin
+  ShowMessage('NAMA TIDAK BOLEH KOSONG');
+  end else
+if edt3.Text =''then
+begin
+  ShowMessage('JENIS KELAMIN TIDAK BOLEH KOSONG');
+  end else
+if edt4.Text =''then
+begin
+  ShowMessage('PENDIDIKAN TIDAK BOLEH KOSONG');
+  end else
+if edt5.Text =''then
+begin
+  ShowMessage('NO TELPON LAHIR TIDAK BOLEH KOSONG');
+  end else
+if edt6.Text =''then
+begin
+  ShowMessage('PEKERJAAN KELAMIN TIDAK BOLEH KOSONG');
+  end else
+begin
+  //simpan
+end;
+ zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into data_ortu values(null,"'+edt1.text+'","'+edt2.text+'","'+edt3.text+'","'+edt4.text+'","'+edt5.text+'","'+edt6.text+'")');
+zqry1.ExecSQL;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from data_ortu');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
 end.

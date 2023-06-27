@@ -32,8 +32,6 @@ type
     lbl13: TLabel;
     lbl14: TLabel;
     edt6: TEdit;
-    dtp2: TDateTimePicker;
-    dtp3: TDateTimePicker;
     edt7: TEdit;
     edt8: TEdit;
     edt9: TEdit;
@@ -47,6 +45,10 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
+    edt11: TEdit;
+    edt12: TEdit;
+    btn6: TButton;
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,6 +60,13 @@ var
 
 implementation
 
+uses Unit3;
+
 {$R *.dfm}
+
+procedure TForm2.btn6Click(Sender: TObject);
+begin
+form3.show;
+end;
 
 end.

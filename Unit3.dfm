@@ -33,51 +33,44 @@ object Form3: TForm3
     Width = 745
     Height = 289
     TabOrder = 0
-    object lbl1: TLabel
-      Left = 32
-      Top = 32
-      Width = 72
-      Height = 13
-      Caption = 'ID ORTU/WALI'
-    end
     object lbl2: TLabel
       Left = 32
-      Top = 64
+      Top = 32
       Width = 38
       Height = 13
       Caption = 'NIP/NIK'
     end
     object lbl3: TLabel
       Left = 32
-      Top = 96
+      Top = 64
       Width = 29
       Height = 13
       Caption = 'NAMA'
     end
     object lbl4: TLabel
       Left = 32
-      Top = 128
+      Top = 96
       Width = 74
       Height = 13
       Caption = 'JENIS KELAMIN'
     end
     object lbl5: TLabel
-      Left = 408
-      Top = 32
+      Left = 32
+      Top = 128
       Width = 61
       Height = 13
       Caption = 'PENDIDIKAN'
     end
     object lbl6: TLabel
-      Left = 408
-      Top = 64
+      Left = 400
+      Top = 32
       Width = 62
       Height = 13
       Caption = 'NO TELEPON'
     end
     object lbl7: TLabel
-      Left = 408
-      Top = 96
+      Left = 400
+      Top = 64
       Width = 64
       Height = 13
       Caption = 'PEKERJAAAN'
@@ -124,20 +117,13 @@ object Form3: TForm3
       Height = 21
       TabOrder = 5
     end
-    object edt7: TEdit
-      Left = 512
-      Top = 88
-      Width = 121
-      Height = 21
-      TabOrder = 6
-    end
     object btn1: TButton
       Left = 48
       Top = 224
       Width = 81
       Height = 33
       Caption = 'BARU'
-      TabOrder = 7
+      TabOrder = 6
       OnClick = btn1Click
     end
     object btn2: TButton
@@ -146,7 +132,8 @@ object Form3: TForm3
       Width = 81
       Height = 33
       Caption = 'SIMPAN'
-      TabOrder = 8
+      TabOrder = 7
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 336
@@ -154,7 +141,7 @@ object Form3: TForm3
       Width = 81
       Height = 33
       Caption = 'EDIT'
-      TabOrder = 9
+      TabOrder = 8
     end
     object btn4: TButton
       Left = 488
@@ -162,7 +149,7 @@ object Form3: TForm3
       Width = 81
       Height = 33
       Caption = 'HAPUS'
-      TabOrder = 10
+      TabOrder = 9
     end
     object btn5: TButton
       Left = 632
@@ -170,7 +157,7 @@ object Form3: TForm3
       Width = 81
       Height = 33
       Caption = 'BATAL'
-      TabOrder = 11
+      TabOrder = 10
     end
   end
   object dbgrd1: TDBGrid
