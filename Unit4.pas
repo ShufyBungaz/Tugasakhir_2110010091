@@ -38,6 +38,7 @@ type
     procedure bersih;
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,6 +100,41 @@ end;
 procedure TForm4.FormShow(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm4.btn2Click(Sender: TObject);
+begin
+if edt1.Text =''then
+begin
+  ShowMessage('NIK TIDAK BOLEH KOSONG');
+  end else
+if edt2.Text =''then
+begin
+  ShowMessage('NAMA TIDAK BOLEH KOSONG');
+  end else
+if edt3.Text =''then
+begin
+  ShowMessage('JENIS KELAMIN TIDAK BOLEH KOSONG');
+  end else
+if edt4.Text =''then
+begin
+  ShowMessage('PENDIDIKAN TIDAK BOLEH KOSONG');
+  end else
+if edt5.Text =''then
+begin
+  ShowMessage('MATA PELAJARAN TIDAK BOLEH KOSONG');
+  end else
+if edt6.Text =''then
+begin
+  ShowMessage('KELAS TIDAK BOLEH KOSONG');
+  end else
+if edt7.Text =''then
+begin
+  ShowMessage('JABATAN TIDAK BOLEH KOSONG');
+  end else
+begin
+  //simpan
+end;
 end;
 
 end.
