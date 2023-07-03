@@ -156,6 +156,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'EDIT'
       TabOrder = 9
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 480

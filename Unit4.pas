@@ -39,6 +39,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,6 +47,7 @@ type
   end;
 
 var
+  id : string;
   Form4: TForm4;
 
 implementation
@@ -134,6 +136,26 @@ begin
   end else
 begin
   //simpan
+end;
+end;
+
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '')or(edt4.Text= '')or(edt5.Text= '')or(edt6.Text= '')or(edt7.Text= '') then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update data_walikelas set nik="'+edt1.Text+'",nama="'+edt2.Text+'",jenis_kelamin="'+edt3.Text+'",pendidikan="'+edt4.Text+'",mata_pelajaran="'+edt5.Text+'",kelas="'+edt6.Text+'",jabatan="'+edt7.Text+'" where id="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from data_walikelas');
+  zqry1.Open;
+  posisiawal;
 end;
 end;
 
