@@ -174,6 +174,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'BATAL'
       TabOrder = 11
+      OnClick = btn5Click
     end
   end
   object dbgrd1: TDBGrid
