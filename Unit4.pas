@@ -34,6 +34,10 @@ type
     zqry1: TZQuery;
     con1: TZConnection;
     ds1: TDataSource;
+    procedure posisiawal;
+    procedure bersih;
+    procedure btn1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,5 +50,55 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm4.bersih;
+begin
+  edt1.Clear;
+ edt2.Clear;
+ edt3.Clear;
+ edt4.Clear;
+ edt5.Clear;
+ edt6.Clear;
+ edt7.Clear;
+end;
+
+procedure TForm4.btn1Click(Sender: TObject);
+begin
+  btn1.Enabled := False;
+  btn2.Enabled := True;
+  btn3.Enabled := False;
+  btn4.Enabled := False;
+  btn5.Enabled := True;
+  edt1.Enabled := True;
+  edt2.Enabled := True;
+  edt3.Enabled := True;
+  edt4.Enabled := True;
+  edt5.Enabled := True;
+  edt6.Enabled := True;
+  edt7.Enabled := True;
+end;
+
+procedure TForm4.posisiawal;
+begin
+ bersih;
+  btn1.Enabled := True;
+  btn2.Enabled := False;
+  btn3.Enabled := False;
+  btn4.Enabled := False;
+  btn5.Enabled := False;
+  edt1.Enabled := False;
+  edt2.Enabled := False;
+  edt3.Enabled := False;
+  edt4.Enabled := False;
+  edt5.Enabled := False;
+  edt6.Enabled := False;
+  edt7.Enabled := False;
+end;
+
+
+procedure TForm4.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
 
 end.
